@@ -1,0 +1,137 @@
+{
+  "boot": {
+    "title": "IISIP Smart Campus — v1.15.60 PRE-SMOKE · Gap Fix",
+    "meta": "SMOKE_PASS_FRONTEND_VALIDATED",
+    "errors": [],
+    "bootErrors": []
+  },
+  "public": {
+    "count": 15,
+    "bad": []
+  },
+  "student": {
+    "count": 20,
+    "bad": []
+  },
+  "advisor_e2e": {
+    "kaprodi_panel": true,
+    "request_modal": true,
+    "pending": true,
+    "bpaa_panel": true,
+    "role_approved": true,
+    "eligible": true,
+    "reassign_modal": true,
+    "publish_button": true,
+    "hakiki_advisees": 1,
+    "portal": true,
+    "errors": []
+  },
+  "teaching_e2e": {
+    "screen": true,
+    "lecturer_modal": true,
+    "team_modal": true,
+    "team_saved": true,
+    "errors": []
+  },
+  "super_governance": {
+    "pending_before_ack": 1,
+    "reports": 1,
+    "rector_screen": true,
+    "ack_button": true,
+    "pending_after_ack": 0,
+    "errors": []
+  },
+  "report_notification": {
+    "xlsx": true,
+    "pdf": true,
+    "report_text": true,
+    "notif": true,
+    "errors": []
+  },
+  "library": {
+    "screen": true,
+    "filter": true,
+    "errors": []
+  },
+  "verify": {
+    "super": {
+      "owner": "V160_SUPER_ADMIN_HELPER_GOVERNANCE_FINAL",
+      "superAdminMenu": [
+        "/staff/system",
+        "/staff/system/unit-access",
+        "/staff/system/users",
+        "/staff/system/roles",
+        "/staff/system/academic-assignment",
+        "/staff/system/pmb-periods",
+        "/staff/system/pmb-form",
+        "/staff/system/content",
+        "/staff/system/config",
+        "/staff/system/import-export",
+        "/staff/system/health",
+        "/staff/system/delegations",
+        "/staff/system/conflict-audit",
+        "/staff/system/audit",
+        "/staff/system/rector-report",
+        "/staff/profile"
+      ],
+      "rectorReportMenu": true,
+      "supportRoleCount": 16,
+      "staffCount": 31,
+      "activeAssignments": 40,
+      "governanceReports": 0,
+      "pendingRectorReview": 0,
+      "assistActive": false,
+      "canonicalSourceOfTruth": true,
+      "protectedRootRoles": [
+        "Super Admin",
+        "Pimpinan"
+      ]
+    },
+    "academic": {
+      "kaprodiMenu": true,
+      "bpaaAdvisorMenu": true,
+      "bpaaTeachingMenu": true,
+      "superAdminMenu": true,
+      "hakikiRoles": [
+        "Dosen"
+      ],
+      "hakikiAdvisees": 0,
+      "advisorRoleRequestState": true,
+      "advisorRoleRequestCandidatesHI": [
+        "DR. Enny Suryanjari, M.Si",
+        "Muhammad Ikhwan Hakiki, S.Sos, M.I.Pol",
+        "Netik Indarwati, S.s, M.Si"
+      ],
+      "pendingAdvisorRoleRequests": 0,
+      "students": 81,
+      "offerings": 154
+    },
+    "v190": {
+      "version": "v1.15.60",
+      "path": "/",
+      "activeUatOwner": "v160-pre-smoke-academic-assignment-action-fix",
+      "regressionFreeze": "v1.15.60",
+      "alumniApi": true,
+      "uatRenderer": true,
+      "canonicalAliasCount": 10,
+      "malformedHashGuard": true,
+      "identityObserver": true
+    },
+    "v191": {
+      "version": "v1.15.60",
+      "path": "/",
+      "activeUatOwner": "v160-pre-smoke-academic-assignment-action-fix",
+      "hasAlumniApi": true,
+      "criticalButtonSelectors": 33,
+      "doubleClickGuard": true,
+      "stateJumpGuards": [
+        "v185",
+        "v186",
+        "v187",
+        "v188",
+        "v189"
+      ]
+    },
+    "errors": []
+  }
+}
