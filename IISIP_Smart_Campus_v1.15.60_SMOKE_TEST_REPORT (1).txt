@@ -1,0 +1,38 @@
+IISIP SMART CAMPUS v1.15.60 — SMOKE TEST REPORT
+
+STATUS: SMOKE PASS CANDIDATE
+
+1. JavaScript syntax: 11/11 PASS
+2. Runtime boot errors: 0
+3. Critical runtime route checks: 17/17 PASS
+4. Student academic history: PASS
+   - Total SKS Mustafa: 120
+   - Earned SKS canonical: 120
+   - Historical semesters: 6
+   - Riwayat Kelas/KHS/Transkrip: PASS
+5. PMB lifecycle self-test: PASS
+   - Published form active: PASS
+   - Unpublish blocks public form: PASS
+   - Scheduled form blocked: PASS
+   - Closed period blocks registration: PASS
+6. PMB period controls: PASS
+   - Buat Periode, Generate Tahunan, Edit, Tutup Pendaftaran available
+7. PMB Unpublish E2E: PASS
+   - Before: active form PMB-FORM-2026-2027-v1
+   - After Unpublish: activePublicForm = None
+   - Public /pmb/apply blocked = True
+8. Academic assignment verification: PASS
+   - Kaprodi advisor assignment menu: PASS
+   - BPAA advisor + teaching team menu: PASS
+   - Super Admin academic assignment menu: PASS
+9. Super Admin governance verification: PASS
+   - Rector report menu present
+   - canonical source-of-truth flag true
+   - protected root roles: Super Admin, Pimpinan
+
+SMOKE FINDING FIXED
+- HIGH: legacy v136 migration re-published a form after Admin PMB clicked Unpublish.
+- FIX: migration now seeds an initial 2026/2027 form only when no form record exists at all. Explicit DRAFT/UNPUBLISHED/REVISED lifecycle states are preserved.
+- RETEST: PASS.
+
+Next recommended validation: real-browser/GitHub Pages test of this exact candidate before Frontend Functional Freeze.

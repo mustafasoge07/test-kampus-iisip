@@ -1,0 +1,108 @@
+{
+  "version": "v1.15.60",
+  "stage": "SMOKE_PASS_CANDIDATE",
+  "source_file": "IISIP_Smart_Campus_v1.15.60_PRE_SMOKE_PMB_UNPUBLISH_FINAL_FIXED.html",
+  "syntax": {
+    "passed": 11,
+    "total": 11
+  },
+  "runtime_boot_errors": [],
+  "critical_route_checks": {
+    "passed": 17,
+    "total": 17,
+    "failed": []
+  },
+  "student_history": {
+    "pass": true,
+    "dashSks": 120,
+    "earnedSks": 120,
+    "historyTerms": 6,
+    "hasHistoryRoute": true,
+    "hasKhs": true,
+    "hasTranscript": true
+  },
+  "pmb_lifecycle": {
+    "pass": true,
+    "activeNow": true,
+    "blockedAfterUnpublish": true,
+    "scheduledBlocked": true,
+    "periodClosed": true
+  },
+  "academic_assignment_verify": {
+    "kaprodiMenu": true,
+    "bpaaAdvisorMenu": true,
+    "bpaaTeachingMenu": true,
+    "superAdminMenu": true,
+    "hakikiRoles": [
+      "Dosen"
+    ],
+    "hakikiAdvisees": 0,
+    "advisorRoleRequestState": true,
+    "advisorRoleRequestCandidatesHI": [
+      "DR. Enny Suryanjari, M.Si",
+      "Muhammad Ikhwan Hakiki, S.Sos, M.I.Pol",
+      "Netik Indarwati, S.s, M.Si"
+    ],
+    "pendingAdvisorRoleRequests": 0,
+    "students": 81,
+    "offerings": 154
+  },
+  "super_admin_verify": {
+    "owner": "V160_SUPER_ADMIN_HELPER_GOVERNANCE_FINAL",
+    "superAdminMenu": [
+      "/staff/system",
+      "/staff/system/unit-access",
+      "/staff/system/users",
+      "/staff/system/roles",
+      "/staff/system/academic-assignment",
+      "/staff/system/pmb-periods",
+      "/staff/system/pmb-form",
+      "/staff/system/content",
+      "/staff/system/config",
+      "/staff/system/import-export",
+      "/staff/system/health",
+      "/staff/system/delegations",
+      "/staff/system/conflict-audit",
+      "/staff/system/audit",
+      "/staff/system/rector-report",
+      "/staff/profile"
+    ],
+    "rectorReportMenu": true,
+    "supportRoleCount": 16,
+    "staffCount": 31,
+    "activeAssignments": 40,
+    "governanceReports": 0,
+    "pendingRectorReview": 0,
+    "assistActive": false,
+    "canonicalSourceOfTruth": true,
+    "protectedRootRoles": [
+      "Super Admin",
+      "Pimpinan"
+    ]
+  },
+  "pmb_period_ui": {
+    "newPeriod": true,
+    "generate": true,
+    "close": true,
+    "edit": true
+  },
+  "pmb_unpublish_e2e": {
+    "active_before": "PMB-FORM-2026-2027-v1",
+    "unpublish_button": true,
+    "active_after": null,
+    "public_blocked_after_unpublish": true,
+    "status_after": [
+      "UNPUBLISHED"
+    ]
+  },
+  "smoke_findings_fixed": [
+    {
+      "id": "PMB-UNPUBLISH-AUTO-REPUBLISH",
+      "severity": "HIGH",
+      "finding": "Legacy v136 migration re-seeded a PUBLISHED PMB form after explicit Admin PMB Unpublish.",
+      "fix": "Legacy seed now runs only when the 2026/2027 period has no form record at all; DRAFT/UNPUBLISHED/REVISED states are preserved as Admin decisions.",
+      "retest": "PASS"
+    }
+  ],
+  "note": "Runtime smoke executed in headless Chromium via injected document content because local file/localhost navigation is restricted by the environment. Application boot reported no __IISIP_BOOT_ERRORS and no runtime exceptions in the targeted checks."
+}
